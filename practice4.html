@@ -1,0 +1,50 @@
+</head>
+
+<body>
+
+<h1>Multiplication Table</h1>
+
+<form method="GET">
+    Enter a number:
+    <input type="number" name="number">
+    <input type="submit" value="Create Table">
+</form>
+
+<?php
+
+if (isset($_GET["number"])) {
+
+    $number = $_GET["number"];
+
+    echo "<table border='1'>";
+
+    echo "<tr>";
+    echo "<th>*</th>";
+
+    for ($i = 1; $i <= $number; $i++) {
+        echo "<th>$i</th>";
+    }
+
+    echo "</tr>";
+
+    for ($i = 1; $i <= $number; $i++) {
+
+        echo "<tr>";
+
+        echo "<th>$i</th>";
+
+        for ($j = 1; $j <= $number; $j++) {
+            echo "<td>" . ($i * $j) . "</td>";
+        }
+
+        echo "</tr>";
+    }
+
+    echo "</table>";
+}
+
+?>
+
+</body>
+</html>
+

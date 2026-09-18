@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>CSS Font Control</title>
+
+    <style>
+        #paragraph {
+            border: 5px solid black;
+            padding: 20px;
+        }
+    </style>
+
+    <script>
+        function changeStyle() {
+            let r = document.getElementById("r").value;
+            let g = document.getElementById("g").value;
+            let b = document.getElementById("b").value;
+            let width = document.getElementById("width").value;
+
+            let paragraph = document.getElementById("paragraph");
+
+            paragraph.style.color = "rgb(" + r + "," + g + "," + b + ")";
+            paragraph.style.borderColor = "rgb(" + r + "," + g + "," + b + ")";
+            paragraph.style.borderWidth = width + "px";
+        }
+    </script>
+</head>
+
+<body>
+
+    <h1>CSS Font Control</h1>
+
+    <p id="paragraph">
+        This is some dummy text for the CSS font control practice 2. The controls below change the apperence of this paragraph
+    </p>
+
+    <p>
+        Red:
+        <input type="text" id="r">
+    </p>
+
+    <p>
+        Green:
+        <input type="text" id="g">
+    </p>
+
+    <p>
+        Blue:
+        <input type="text" id="b">
+    </p>
+
+    <p>
+        Border Width:
+        <input type="text" id="width">
+    </p>
+
+    <button onclick="changeStyle()">Change Style</button>
+
+</body>
+</html>
